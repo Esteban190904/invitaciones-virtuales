@@ -25,7 +25,7 @@ export default function AdminPanel() {
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
     // IMPORTANTE: Cambia "admin123" por una contraseña segura para ti
-    if (passwordInput === "admin123") {
+    if (passwordInput === process.env.NEXT_PUBLIC_ADMIN_PASSWORD) {
       setAutenticado(true);
     } else {
       alert("Contraseña incorrecta");
